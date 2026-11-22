@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypertension Prevention & Control | Kurkur Health Center IEC/BCC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #14365d;
+      --primary-light: #1e4e8c;
+      --accent: #c82333;
+      --teal: #1b6b5a;
+      --bg: #f4f7fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      padding: 2.25rem 1.25rem;
+      text-align: center;
+      border-bottom: 5px solid var(--accent);
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.16);
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      margin-bottom: 0.7rem;
+    }
+    header h1 { font-size: 1.85rem; margin-bottom: 0.4rem; }
+    header p { opacity: 0.92; max-width: 720px; margin: 0 auto; font-size: 0.98rem; }
+
+    .container {
+      max-width: 1140px;
+      margin: 1.75rem auto;
+      padding: 0 1.25rem;
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 1.75rem;
+    }
+    @media (max-width: 880px) {
+      .container { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      margin-bottom: 1.75rem;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 1.22rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    h3 { font-size: 1.02rem; color: var(--teal); margin: 1rem 0 0.4rem; }
+    p { margin-bottom: 0.85rem; }
+    ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+    li { margin-bottom: 0.35rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      padding: 0.6rem 0.7rem;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    th:first-child, td:first-child { text-align: left; }
+    th { background: var(--primary); color: #fff; }
+    tr.highlight { background: #eef6ff; font-weight: 700; color: var(--primary); }
+
+    .audio-box {
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      padding: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    audio { width: 100%; margin: 0.65rem 0; border-radius: 6px; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+    button, .btn-link {
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      padding: 0.52rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.86rem;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: #0f2947; }
+    .btn-accent { background: var(--accent); color: #fff; }
+    .btn-accent:hover { background: #a71d2a; }
+    .btn-outline { background: #fff; border: 1px solid #cbd5e1; color: var(--text); }
+    .btn-outline.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    .script-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      white-space: pre-line;
+      max-height: 390px;
+      overflow-y: auto;
+    }
+    .sfx { color: var(--muted); font-style: italic; font-size: 0.88rem; }
+
+    .poster-wrapper { text-align: center; }
+    .poster-wrapper img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      background: #f9fafb;
+    }
+    .poster-actions {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
+    }
+    .key-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      text-align: left;
+      margin-top: 1.25rem;
+    }
+    @media (max-width: 520px) { .key-pillars { grid-template-columns: 1fr; } }
+    .pillar {
+      padding: 0.85rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+    }
+    .pillar-risk { background: #fef2f2; border: 1px solid #fecaca; }
+    .pillar-protect { background: #ecfdf5; border: 1px solid #a7f3d0; }
+    .pillar h4 { margin-bottom: 0.4rem; font-size: 0.92rem; }
+    .pillar-risk h4 { color: #991b1b; }
+    .pillar-protect h4 { color: #065f46; }
+
+    .bp-checker {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .bp-inputs {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin: 0.6rem 0;
+    }
+    .bp-inputs input {
+      padding: 0.5rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      width: 130px;
+      font-size: 0.92rem;
+    }
+    .bp-result {
+      margin-top: 0.6rem;
+      padding: 0.65rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Principles of Health Education • MSc Epidemiology & Biostatistics</div>
+  <h1>Hypertension Prevention and Control among Adults</h1>
+  <p>Community Health Assessment, Radio Spot Audio IEC, and Educational Poster • Kurkur Health Center</p>
+</header>
+
+<div class="container">
+  <!-- LEFT COLUMN: ASSESSMENT SUMMARY & AUDIO -->
+  <div>
+    <section class="card">
+      <h2>1. Health Facility Assessment Summary</h2>
+      <p><strong>Facility Visited:</strong> Kurkur Health Center<br>
+      <strong>Objective:</strong> Identify major community health problems and prioritize one condition for targeted Behavior Change Communication (BCC).</p>
+
+      <h3>Assessment Methods</h3>
+      <ul>
+        <li>Discussions with health professionals and informal interviews with clients attending Kurkur Health Center</li>
+        <li>Review of outpatient department (OPD) clinical records</li>
+        <li>Observation of community health service reports</li>
+      </ul>
+
+      <h3>Key Findings & Justification</h3>
+      <p>Among <strong>Hypertension</strong>, <strong>Type 2 Diabetes Mellitus</strong>, and <strong>Poor Sanitation</strong>, Hypertension scored highest (<strong>23/25</strong>) due to high adult prevalence, silent progression, severe complications (stroke, heart disease, kidney failure), and high feasibility of community-level prevention.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Prioritization Criteria</th>
+            <th>Hypertension</th>
+            <th>Diabetes Mellitus</th>
+            <th>Poor Sanitation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Magnitude</td><td>5</td><td>4</td><td>3</td></tr>
+          <tr><td>Severity</td><td>5</td><td>4</td><td>3</td></tr>
+          <tr><td>Feasibility of Intervention</td><td>4</td><td>3</td><td>4</td></tr>
+          <tr><td>Community Concern</td><td>4</td><td>3</td><td>3</td></tr>
+          <tr><td>Government Concern</td><td>5</td><td>4</td><td>4</td></tr>
+          <tr class="highlight"><td>Total Score (Out of 25)</td><td>23</td><td>18</td><td>17</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>2. IEC Radio Spot Audio & Community Scripts</h2>
+      <div class="audio-box">
+        <strong>Title:</strong> የደም ግፊትዎን ይወቁ፣ ሕይወትዎን ይጠብቁ! (Know Your Blood Pressure, Protect Your Life!)<br>
+        <small style="color:var(--muted);">Duration: ~45–50 seconds • Format: Dramatic Dialogue + Health Educator Wrap-Up</small>
+
+        <audio id="radioAudio" controls preload="metadata">
+          <source src="https://drive.google.com/uc?export=download&id=1qy4X4355gTEB5DS3yYSlwnRIv4QoXraM" type="audio/mpeg">
+          Your browser does not support the HTML5 audio element.
+        </audio>
+        <div style="font-size:0.82rem; color:var(--muted);">
+          Audio not playing? <a href="https://drive.google.com/file/d/1qy4X4355gTEB5DS3yYSlwnRIv4QoXraM/view?usp=sharing" target="_blank" rel="noopener">Open directly on Google Drive ↗</a>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn-outline active" id="btnAmSpot" onclick="switchTab('amSpot')">አማርኛ Radio Spot</button>
+          <button class="btn-outline" id="btnAmTalk" onclick="switchTab('amTalk')">አማርኛ Health Talk</button>
+          <button class="btn-outline" id="btnEnSpot" onclick="switchTab('enSpot')">English Script</button>
+          <button class="btn-primary" onclick="speakEnglish()">▶ English TTS</button>
+          <button class="btn-outline" onclick="stopSpeech()">⏹ Stop</button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Amharic Radio Spot -->
+      <div id="tabAmSpot" class="script-box">
+<span class="sfx">[SFX: ረጋ ያለ የጠዋት ድባብ እና የወፍ ድምጽ፤ ከዚያም አጭር፣ ትኩረት የሚስብ የከበሮ ወይም የማሲንቆ ምት በዝቅተኛ ድምጽ ይሰማል።]</span>
+
+<strong>አበበ (ጓደኛ):</strong> ሰላም ብርሃን! ዛሬ በጣም ደህና ትመስላለህ፤ ምንም ምልክት ባይታይብህም ጤንነትህን እንዴት እየተከታተልክ ነው?
+
+<strong>ብርሃን (የማኅበረሰብ አባል):</strong> ሰላም አበበ! እኔስ "ምንም አላመመኝም፣ ምልክት የለኝም" ብዬ ነበር፤ ግን ዛሬ በአቅራቢያችን ባለው ጤና ጣቢያ የደም ግፊቴን ተመረመርኩ። አስብ! ከፍተኛ የደም ግፊት ምንም ምልክት ሳያሳይ ለረጅም ዓመታት ሊቆይ ይችላል!
+
+<strong>አበበ:</strong> እውነትህን ነው ብርሃን! የደም ግፊት በዝምታ የሚያጠቃ ("silent killer") ችግር ነው። ካልተቆጣጠርነው ለስትሮክ (ጭንቅላት ውስጥ የደም መፍሰስ ወይም መቋረጥ)፣ ለልብ በሽታ እና ለኩላሊት ሕመም ሊዳርገን ይችላል።
+
+<span class="sfx">[SFX: የማስጠንቀቂያ ስሜት ያለው አጭር የሙዚቃ ሽግግር]</span>
+
+<strong>የጤና መልዕክት አቅራቢ:</strong> ውድ የማኅበረሰባችን አባላት! ራስዎንና ቤተሰብዎን ዛሬውኑ ይጠብቁ።
+• ጨው ይቀንሱ፤
+• አትክልትና ፍራፍሬ አዘውትረው ይመገቡ፤
+• በየቀኑ ቢያንስ ለሠላሳ ደቂቃ የአካል እንቅስቃሴ ያድርጉ፤ ጤናማ ክብደት ይጠብቁ፤ ጭንቀትንም ይቆጣጠሩ፤
+• ትንባሆ ማጨስ እና ከመጠን ያለፈ አልኮል መጠጣት ያቁሙ፤
+• እንዲሁም በአቅራቢያዎ ባለው ጤና ተቋም ሄደው የደም ግፊትዎን በየጊዜው ይመርምሩ!
+
+ምልክት ባይኖርዎትም ምርመራ ሕይወት ያድናል! ጤናማ የአኗኗር ዘይቤ = ጤናማ ልብ = ረጅም ሕይወት።
+ይህ የጤና ትምህርት መልዕክት በአካባቢዎ በሚገኘው የጤና ተቋም ተዘጋጅቶ ቀረበ።
+      </div>
+
+      <!-- Tab 2: Extended Amharic Community Health Education Talk -->
+      <div id="tabAmTalk" class="script-box" style="display:none;">
+<strong>የማኅበረሰብ ጤና ትምህርት ማብራሪያ (ስለ ደም ግፊት ምንነትና መከላከያ መንገዶች)</strong>
+
+ይህ ስለ ደም ግፊት ምንነትና ራሳችንን እንዴት መጠበቅ እንደምንችል የሚያስገነዝብ አጭር ቅኝት ነው። ምንም አይነት የህመም ስሜት ሳያሳይ በድብቅ የሚጎዳንን ይህን በሽታ እንዴት በቀላሉ መቆጣጠር እንደምንችል በግልጽ ያሳየናል።
+
+<strong>1. የበሽታው አስፈሪ ባህሪ ("ጸጥተኛ ገዳይ"):</strong>
+ለአመታት ምንም ሳይታወቀን በውስጣችን ተደብቆ ሊኖር የሚችል ጸጥተኛ ገዳይ ነው። ካልተቆጣጠርነው የልብ ህመም፣ የኩላሊት ችግር፣ አልፎ ተርፎም ስትሮክ ለተባለው የጭንቅላት ውስጥ ደም መፍሰስ ይዳርገናል።
+
+<strong>2. መከላከያ መንገዶች (የዕለት ተዕለት አኗኗር):</strong>
+• ምግባችን ላይ ጨው መቀነስ፤
+• አትክልትና ፍራፍሬን አዘውትሮ መመገብ፤
+• ክብደትንና ጭንቀትን መቆጣጠር፤
+• በቀን ለ30 ደቂቃ ያህል የአካል እንቅስቃሴ ማድረግ፤
+• ሲጋራ ማጨስንና ከመጠን ያለፈ አልኮልን እርግፍ አድርጎ መተው።
+
+<strong>3. መደበኛ ምርመራ (ቅድመ ጥንቃቄ):</strong>
+"ኧረ ምንም ካላመመኝ ለምን ወደ ሀኪም ቤት ሄጄ እመረመራለሁ?" እንላለን፤ ግን ተሳስተናል። ጤናማ ስሜት ቢሰማንም እንኳ ሄደን መመርመር በድንገት ከሚመጣ አደጋ ህይወታችንን ያተርፋል። አሁኑኑ ምንም አይነት የህመም ምልክት ባይኖራችሁም ሄዳችሁ የደም ግፊታችሁን ተመርመሩ።
+      </div>
+
+      <!-- Tab 3: English Script -->
+      <div id="tabEnSpot" class="script-box" style="display:none;">
+<strong>Title:</strong> Know Your Blood Pressure, Protect Your Life (~40 seconds)
+
+Dear community members!
+High blood pressure, also known as hypertension, is a silent killer. Many people have it without knowing. Uncontrolled hypertension can lead to stroke, heart disease, and kidney failure.
+
+Protect yourself and your family today:
+• Reduce salt intake
+• Eat more fruits and vegetables
+• Exercise regularly (at least 30 minutes daily)
+• Maintain a healthy weight and manage stress
+• Avoid smoking and excessive alcohol consumption
+• Check your blood pressure at the nearest health facility
+
+Early detection saves lives. Know your blood pressure. Live a healthier and longer life.
+This message is brought to you by Kurkur Health Center.
+      </div>
+    </section>
+  </div>
+
+  <!-- RIGHT COLUMN: IEC POSTER & INTERACTIVE BP GUIDE -->
+  <div>
+    <section class="card poster-wrapper">
+      <h2>3. Educational IEC Poster (ከፍተኛ የደም ግፊትን እንከላከል)</h2>
+      <img src="https://drive.google.com/thumbnail?id=11aKL5Pldnwv5XSneqQFj2SKBGgToOdXf&sz=w1000" alt="Hypertension Prevention Poster in Amharic" />
+
+      <div class="poster-actions">
+        <a class="btn-link btn-accent" href="https://drive.google.com/uc?export=download&id=11aKL5Pldnwv5XSneqQFj2SKBGgToOdXf" target="_blank" rel="noopener">⬇ Download Poster</a>
+        <a class="btn-link btn-outline" href="https://drive.google.com/file/d/11aKL5Pldnwv5XSneqQFj2SKBGgToOdXf/view?usp=sharing" target="_blank" rel="noopener">🔍 View Full Size</a>
+        <button class="btn-outline" onclick="window.print()">🖨 Print Page</button>
+      </div>
+
+      <div class="key-pillars">
+        <div class="pillar pillar-risk">
+          <h4>ለአደጋ የሚያጋልጡ ሁኔታዎች (Risk Factors)</h4>
+          <ul>
+            <li>ከመጠን ያለፈ ጨው መመገብ</li>
+            <li>የአካል ብቃት እንቅስቃሴ አለማድረግ</li>
+            <li>ሲጋራ ማጨስና አልኮል መጠጣት</li>
+            <li>ከመጠን ያለፈ ውፍረትና ጭንቀት</li>
+          </ul>
+        </div>
+        <div class="pillar pillar-protect">
+          <h4>ራስዎን እንዴት ይጠብቁ? (Prevention)</h4>
+          <ul>
+            <li>የደም ግፊትዎን በየጊዜው ይለኩ!</li>
+            <li>ጨው ይቀንሱ፣ አትክልትና ፍራፍሬ ያዘውትሩ</li>
+            <li>በቀን ለ30 ደቂቃ እንቅስቃሴ ያድርጉ</li>
+            <li>ሲጋራና አልኮል ያስወግዱ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bp-checker" style="text-align:left;">
+        <strong>🩺 Quick Blood Pressure Reading Guide (የደም ግፊት መለኪያ መረጃ)</strong>
+        <div class="bp-inputs">
+          <input type="number" id="sysInput" placeholder="Systolic (e.g. 120)" min="60" max="260">
+          <input type="number" id="diaInput" placeholder="Diastolic (e.g. 80)" min="40" max="160">
+          <button class="btn-primary" onclick="checkBP()">Check Category</button>
+        </div>
+        <div id="bpResult" class="bp-result"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer>
+  Prepared for Principles of Health Education (MSc Epidemiology & Biostatistics) • Kurkur Health Center Community Intervention
+</footer>
+
+<script>
+  function switchTab(tab) {
+    document.getElementById('tabAmSpot').style.display = tab === 'amSpot' ? 'block' : 'none';
+    document.getElementById('tabAmTalk').style.display = tab === 'amTalk' ? 'block' : 'none';
+    document.getElementById('tabEnSpot').style.display = tab === 'enSpot' ? 'block' : 'none';
+
+    document.getElementById('btnAmSpot').classList.toggle('active', tab === 'amSpot');
+    document.getElementById('btnAmTalk').classList.toggle('active', tab === 'amTalk');
+    document.getElementById('btnEnSpot').classList.toggle('active', tab === 'enSpot');
+  }
+
+  function speakEnglish() {
+    window.speechSynthesis.cancel();
+    const text = "Dear community members! High blood pressure, also known as hypertension, is a silent killer. Many people have it without knowing. Uncontrolled hypertension can lead to stroke, heart disease, and kidney failure. Protect yourself and your family today. Reduce salt intake, eat more fruits and vegetables, exercise regularly, avoid smoking and excessive alcohol consumption, and check your blood pressure at the nearest health facility. Early detection saves lives. Know your blood pressure. Live a healthier and longer life.";
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 0.95;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function stopSpeech() {
+    window.speechSynthesis.cancel();
+  }
+
+  function checkBP() {
+    const sys = parseInt(document.getElementById('sysInput').value, 10);
+    const dia = parseInt(document.getElementById('diaInput').value, 10);
+    const box = document.getElementById('bpResult');
+    if (!sys || !dia) {
+      box.style.display = 'block';
+      box.style.background = '#fef3c7';
+      box.style.color = '#92400e';
+      box.textContent = 'Please enter both Systolic (top) and Diastolic (bottom) numbers.';
+      return;
+    }
+    box.style.display = 'block';
+    if (sys >= 140 || dia >= 90) {
+      box.style.background = '#fee2e2';
+      box.style.color = '#991b1b';
+      box.innerHTML = '⚠️ High Blood Pressure Range (≥140/90 mmHg) / ከፍተኛ የደም ግፊት ምልክት፦ እባክዎ ዛሬውኑ በአቅራቢያዎ በሚገኝ የጤና ተቋም (Kurkur Health Center) በመሄድ ይመርመሩ።';
+    } else if ((sys >= 120 && sys <= 139) || (dia >= 80 && dia <= 89)) {
+      box.style.background = '#fef3c7';
+      box.style.color = '#92400e';
+      box.innerHTML = '⚡ Elevated / Pre-Hypertension (120–139 / 80–89 mmHg)፦ ጨው ይቀንሱ፣ የአካል እንቅስቃሴ ያድርጉ እና የደም ግፊትዎን በየጊዜው ይከታተሉ።';
+    } else {
+      box.style.background = '#d1fae5';
+      box.style.color = '#065f46';
+      box.innerHTML = '✅ Normal Range (<120/80 mmHg) / መደበኛ የደም ግፊት፦ ጤናማ የአኗኗር ዘይቤዎን ይቀጥሉ እና በየጊዜው ይመርምሩ።';
+    }
+  }
+</script>
+</body>
+</html>
